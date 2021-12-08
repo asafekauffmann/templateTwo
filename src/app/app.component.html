@@ -10,7 +10,7 @@
       {{ item.paciente }} 
    </ng-template>
 
-   <ng-template #header>Data de Recepção</ng-template>
+   <ng-template #header>Recepção</ng-template>
    <ng-template #coluna let-item="dadosLinha">
       {{ item.recepcao }}
    </ng-template>
@@ -30,9 +30,9 @@
       {{ item.teleconsulta }}
    </ng-template>
 
-   <ng-template #header>Retorno do Paciente</ng-template>
+   <ng-template #header>Retorno</ng-template>
    <ng-template #coluna let-item="dadosLinha">
-      {{ item.retornoPaciente }}
+      <a href="#"> {{ item.retornoPaciente }} </a>
    </ng-template>
 
 </app-table>
