@@ -1,17 +1,21 @@
 <app-table [dados]="dados">
 
-   <ng-template #header>Link</ng-template>
+   <ng-template #header>Id</ng-template>
    <ng-template #coluna let-item="dadosLinha">
       <a [attr.href]="'teste/' + item.id"> {{ item.id }} </a>
    </ng-template>
 
 
-   <ng-template #header>Nome</ng-template>
+   <ng-template #header>Paciente</ng-template>
    <ng-template #coluna let-item="dadosLinha">
-      <img
-         [attr.alt]="item.nome"
-         [src]="'https://via.placeholder.com/100x60?text=' + item.nome"
-      />
+      <p [attr.alt]="item.paciente">
+         {{ item.paciente }}
+      </p>
+   </ng-template>
+
+   <ng-template #header>Data de Recepção</ng-template>
+   <ng-template #coluna let-item="dadosLinha">
+      <p [attr.alt]="item.recepcao"> {{ item.recepcao }} </p>
    </ng-template>
 
 </app-table>
