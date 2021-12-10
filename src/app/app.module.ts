@@ -7,17 +7,14 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
-import { NgxTableComponent } from './ngx-table/ngx-table.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PaginationService } from './pagination.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
    declarations: [
       AppComponent,
-      TableComponent,
-      NgxTableComponent
+      TableComponent
    ],
    imports: [
       BrowserModule,
@@ -28,7 +25,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
       HttpClientModule,
       NgxPaginationModule
    ],
-   providers: [PaginationService],
+   providers: [],
    bootstrap: [AppComponent]
 })
 export class AppModule { }
