@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
    selector: 'app-root',
    templateUrl: './app.component.html',
    styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
    dados: Array<{ 
       id: number, 
       paciente: string, 
@@ -17,7 +18,7 @@ export class AppComponent {
       retornoPaciente: string 
    }> = [];
 
-   constructor() {
+   constructor(private auth: AuthService) {
       this.dados = [
          {
             "id": 1,
@@ -281,5 +282,20 @@ export class AppComponent {
          }
       ];
    };
+
+   ngOnInit(): void {
+       this.getData();
+   }
    
+   p:any;
+   data:any=[];
+   
+   getData() {
+     this.auth.getData().subscribe(
+       (data) => {
+         this.data = data;
+         console.log(this.data)
+       }
+     );
+   }
 }
