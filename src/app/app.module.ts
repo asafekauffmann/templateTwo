@@ -10,6 +10,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { NgxTableComponent } from './ngx-table/ngx-table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginationService } from './pagination.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PaginationService } from './pagination.service';
       FormsModule,
       BrowserAnimationsModule,
       PaginationModule.forRoot(),
-      HttpClientModule
+      HttpClientModule,
+      NgxPaginationModule
    ],
    providers: [PaginationService],
    bootstrap: [AppComponent]
