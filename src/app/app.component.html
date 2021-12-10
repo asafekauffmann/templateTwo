@@ -2,7 +2,7 @@
 
    <ng-template #header>Id</ng-template>
    <ng-template #coluna let-item="dadosLinha">
-      <!-- <a [attr.href]="'teste/' + item.id"> --> {{ item.id }} <!-- </a> -->
+      {{ item.id }} 
    </ng-template>
 
    <ng-template #header>Paciente</ng-template>
@@ -37,17 +37,39 @@
 
 </app-table>
 
-<div *ngFor="let d of data | paginate: 
-   { itemsPerPage: 4, currentPage: p }" >
-   <p>"userId" = {{ d.userId }}</p>
-   <p>"id" = {{ d.id }}</p>
-   <p>"title" = {{ d.title }}</p>
-   <p>"completed" = {{ d.completed }}
-   </p>
-   <hr>
+
+
+
+<div class="container">
+   <table class="table" >
+      <thead>
+         <tr>
+           <th scope="col">user</th>
+           <th scope="col">id</th>
+           <th scope="col">title</th>
+           <th scope="col">complet</th>
+         </tr>
+       </thead>
+   
+   
+      <tbody *ngFor="let d of data | paginate: 
+      { itemsPerPage: 4, currentPage: p }">
+        <tr>
+          <td>{{ d.userId }}</td>
+          <td>{{ d.id }}</td>
+          <td>{{ d.title }}</td>
+          <td>{{ d.completed }}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+   
+   
+   <pagination-controls (pageChange)="p = $event" class="float-right">
+   </pagination-controls>
 </div>
 
-<pagination-controls 
-   (pageChange)="p = $event" 
-   class="float-right">
-</pagination-controls>
+
+
+
+
