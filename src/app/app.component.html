@@ -44,20 +44,22 @@
    <table class="table table-hover">
       <thead>
          <tr>
-            <th scope="col">user</th>
-            <th scope="col">id</th>
-            <th scope="col">title</th>
-            <th scope="col">complete</th>
+            <th scope="col"> User</th>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Complete</th>
+            <th scope="col">Text</th>
          </tr>
       </thead>
    
       <tbody *ngFor="let d of data | paginate: { itemsPerPage: 4, currentPage: p }">
         <tr>
-            <td>{{ d.userId }}</td>
-            <td>{{ d.id }}</td>
+            <td id="tableNumSize">{{ d.userId }}</td>
+            <td id="tableNumSize">{{ d.id }}</td>
             <td>{{ d.title }}</td>
             <td>{{ d.completed }}</td>
-        </tr>
+            <td>{{ d.completed }}</td>
+         </tr>
       </tbody>
    </table>
 
