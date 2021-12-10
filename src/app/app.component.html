@@ -44,25 +44,24 @@
    <table class="table" >
       <thead>
          <tr>
-           <th scope="col">user</th>
-           <th scope="col">id</th>
-           <th scope="col">title</th>
-           <th scope="col">complete</th>
+            <th scope="col">user</th>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">complete</th>
          </tr>
-       </thead>
+      </thead>
    
    
-      <tbody *ngFor="let d of data | paginate: 
-      { itemsPerPage: 4, currentPage: p }">
+      <tbody *ngFor="let d of data | paginate: { itemsPerPage: 4, currentPage: p }">
         <tr>
-          <td>{{ d.userId }}</td>
-          <td>{{ d.id }}</td>
-          <td>{{ d.title }}</td>
-          <td>{{ d.completed }}</td>
+            <td>{{ d.userId }}</td>
+            <td>{{ d.id }}</td>
+            <td>{{ d.title }}</td>
+            <td>{{ d.completed }}</td>
         </tr>
         
       </tbody>
-    </table>
+   </table>
    
    
    <pagination-controls (pageChange)="p = $event" class="float-right">
