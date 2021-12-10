@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { NgxTableComponent } from './ngx-table/ngx-table.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginationService } from './pagination.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
       PaginationModule.forRoot(),
       HttpClientModule
    ],
-   providers: [],
+   providers: [PaginationService],
    bootstrap: [AppComponent]
 })
 export class AppModule { }
