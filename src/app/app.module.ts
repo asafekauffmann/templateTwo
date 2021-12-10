@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { NgxTableComponent } from './ngx-table/ngx-table.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
    declarations: [
       AppComponent,
-      TableComponent
+      TableComponent,
+      NgxTableComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
       FormsModule,
       BrowserAnimationsModule,
-      PaginationModule.forRoot()
+      PaginationModule.forRoot(),
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [AppComponent]
