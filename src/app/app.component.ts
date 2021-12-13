@@ -294,7 +294,7 @@ export class AppComponent implements OnInit{
      this.auth.getData().subscribe(
        (data) => {
          this.data = data;
-         console.log(this.data)
+         console.log(this.data.slice(0,11));
        }
      );
    }
