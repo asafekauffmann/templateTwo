@@ -59,11 +59,11 @@
    
       <tbody *ngFor="let d of data | paginate: { itemsPerPage: 10, currentPage: p }">
         <tr>
-            <td id="tableNumSize">{{ d.userId }}</td>
+            <td id="tableNumSize">{{ d.completed }}</td>
             <td id="tableNumSize">{{ d.id }}</td>
             <td>{{ d.title }}</td>
             <td>{{ d.completed }}</td>
-            <td>{{ d.completed }}</td>
+            <td><a href="#">{{ d.completed }}</a></td>
          </tr>
       </tbody>
    </table>
